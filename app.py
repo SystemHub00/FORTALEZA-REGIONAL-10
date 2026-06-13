@@ -32,42 +32,46 @@ VALID_DDDS = {
 # 1. LOCAIS
 # =============================================================================
 LOCAL_OPTIONS = [
-    {"id": "1", "nome": "INSTITUTO VELAUMAR"},
+    {"id": "1", "nome": "CASA DE APOIO AO CIDADÃO"},
 ]
 
 # =============================================================================
 # 2. CATÁLOGO DE CURSOS
 # =============================================================================
 COURSE_CATALOG = [
-    {"id": "1", "nome": "26/TRNC 02 - TRANCISTA"},
-    {"id": "2", "nome": "26/OFDN 05 - OFICINA DE DANÇA (SÃO JOÃO)"},
+    {"id": "1", "nome": "26/MNIC 03 - MANICURE"},
+    {"id": "2", "nome": "26/DSBR 05 - DESIGNER DE SOBRANCELHAS"},
+    {"id": "3", "nome": "26/INAT 02 - INTELIGÊNCIA ARTIFICIAL"},
 ]
 
 # =============================================================================
 # 3. HORÁRIOS
 # =============================================================================
 SCHEDULE_OPTIONS = {
-    "1": {"dias_aula": "Segunda a Quarta", "horario": "13h até 18h"},
-    "2": {"dias_aula": "Sexta",            "horario": "18h até 21h"},
+    "1": {"dias_aula": "Quarta a Terça", "horario": "08h até 12h"},
+    "2": {"dias_aula": "Quarta a Terça", "horario": "13h até 18h"},
+    "3": {"dias_aula": "Segunda e Quarta", "horario": "09h até 11h"},
 }
 
 # =============================================================================
 # 4-5. DATAS
 # =============================================================================
 START_DATE_OPTIONS = {
-    "1": "29/06/2026",
-    "2": "26/06/2026",
+    "1": "17/06/2026",
+    "2": "17/06/2026",
+    "3": "29/06/2026",
 }
 END_DATE_OPTIONS = {
-    "1": "01/07/2026",
-    "2": "26/06/2026",
+    "1": "23/06/2026",
+    "2": "23/06/2026",
+    "3": "29/07/2026",
 }
 
 # =============================================================================
 # 6. ENDEREÇOS
 # =============================================================================
 ADDRESS_OPTIONS = {
-    "1": "📍Avenida Tamandaré, nº 41, bairro Praia de Iracema - CEP.: 60.060-200",
+    "1": "📍Rua Tainá Pires Brilhante, nº 2262, bairro Mondubim - CEP.: 60.767-730",
 }
 
 # =============================================================================
@@ -76,15 +80,21 @@ ADDRESS_OPTIONS = {
 TURMA_OPTIONS = [
     {
         "id": "1", "curso_id": "1", "local_id": "1",
-        "turma_codigo": "26/TRNC-02",
+        "turma_codigo": "26/MNIC-03",
         "agenda_id": "1", "periodo_id": "1",
         "encerramento_id": "1", "endereco_id": "1",
     },
     {
         "id": "2", "curso_id": "2", "local_id": "1",
-        "turma_codigo": "26/OFDN-05",
+        "turma_codigo": "26/DSBR-05",
         "agenda_id": "2", "periodo_id": "2",
         "encerramento_id": "2", "endereco_id": "1",
+    },
+    {
+        "id": "3", "curso_id": "3", "local_id": "1",
+        "turma_codigo": "26/INAT-02",
+        "agenda_id": "3", "periodo_id": "3",
+        "encerramento_id": "3", "endereco_id": "1",
     },
 ]
 
@@ -158,15 +168,13 @@ def fill_form_data_from_selection(form_data):
     for key in ("local","curso","turma","dias_aula","horario",
                 "data_inicio","encerramento","endereco_curso","opcao_id"):
         form_data.setdefault(key, "")
-
-
 TEMPLATE_WIZARD = """\
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Fortaleza - Regional XII</title>
+    <title>Fortaleza - Regional X</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/assistant.css">
     <link href="https://fonts.googleapis.com/css2?family=Wise:wght@400;700;900&display=swap" rel="stylesheet">
@@ -742,7 +750,7 @@ TEMPLATE_WIZARD = """\
         <div class="header-logos">
             <img src="/static/logo-prefeitura.png" alt="Prefeitura" class="logo-prefeitura-topo">
             <div class="header-divider"></div>
-            <img src="/static/logoprojeto.jpeg"    alt="Fortaleza Regional XII" class="logo-projeto-topo">
+            <img src="/static/logoprojeto.jpeg"    alt="Fortaleza Regional X" class="logo-projeto-topo">
         </div>
     </header>
 
@@ -771,7 +779,7 @@ TEMPLATE_WIZARD = """\
                 <section class="wizard-panel" data-step="index">
                     <div class="hero-grid">
                         <div class="hero-card">
-                            <span class="hero-pill">FORTALEZA - REGIONAL XII</span>
+                            <span class="hero-pill">FORTALEZA - REGIONAL X</span>
                             <h1 class="hero-title">INVISTA EM VOCÊ. CONSTRUA SEU FUTURO.</h1>
                             <p class="hero-subtitle">
                                 Descubra novas possibilidades, adquira conhecimentos práticos e dê o
@@ -783,8 +791,9 @@ TEMPLATE_WIZARD = """\
                                 <div class="hero-highlight">
                                     <strong>CURSOS DISPONÍVEIS:</strong>
                                     <div class="cursos-lista">
-                                        <span class="curso-tag">&#128218; 26/TRNC 02 - Trancista</span>
-                                        <span class="curso-tag">&#128218; 26/OFDN 05 - Oficina de Dança (São João)</span>
+                                        <span class="curso-tag">&#128218; 26/MNIC 03 - Manicure</span>
+                                        <span class="curso-tag">&#128130; 26/DSBR 05 - Designer de Sobrancelhas</span>
+                                        <span class="curso-tag">&#129302; 26/INAT 02 - Inteligência Artificial</span>
                                     </div>
                                 </div>
 
@@ -800,6 +809,7 @@ TEMPLATE_WIZARD = """\
                                             <div class="benefit-slide">Mais oportunidades de emprego e geração de renda</div>
                                             <div class="benefit-slide">&#128218; Material didático incluso</div>
                                             <div class="benefit-slide">Networking e troca de experiências</div>
+                                            <div class="benefit-slide">Suporte para desenvolver sua carreira profissional</div>
                                             <div class="benefit-slide">Estrutura e recursos adequados para cada formação</div>
                                             <div class="benefit-slide">Qualificação para quem deseja crescer e conquistar novas oportunidades</div>
                                         </div>
@@ -815,7 +825,7 @@ TEMPLATE_WIZARD = """\
 
                                 <!-- Sobre o projeto -->
                                 <div class="hero-highlight">
-                                    <strong>FORTALEZA - REGIONAL XII</strong>
+                                    <strong>FORTALEZA - REGIONAL X</strong>
                                     Programa de qualificação profissional gratuita para ampliar suas
                                     oportunidades e fortalecer sua entrada no mercado de trabalho.
                                 </div>
@@ -1666,7 +1676,7 @@ TEMPLATE_CONFIRMACAO = """\
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Fortaleza - Regional XII</title>
+    <title>Fortaleza - Regional X</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/assistant.css">
     <link href="https://fonts.googleapis.com/css2?family=Wise:wght@400;700;900&display=swap" rel="stylesheet">
@@ -1889,7 +1899,7 @@ TEMPLATE_CONFIRMACAO = """\
         <div class="header-logos">
             <img src="/static/logo-prefeitura.png" alt="Prefeitura" class="logo-prefeitura-topo">
             <div class="header-divider"></div>
-            <img src="/static/logoprojeto.jpeg"    alt="Fortaleza Regional XII" class="logo-projeto-topo">
+            <img src="/static/logoprojeto.jpeg"    alt="Fortaleza Regional X" class="logo-projeto-topo">
         </div>
     </header>
 
@@ -2129,7 +2139,7 @@ def confirmacao():
     protocolo = session.get("protocolo")
     if not protocolo:
         return redirect(url_for("home"))
-    home_url = "https://fortaleza-regional-12.onrender.com"
+    home_url = "https://fortaleza-regional-10.onrender.com"
     return render_template_string(
         TEMPLATE_CONFIRMACAO,
         protocolo          = protocolo,
