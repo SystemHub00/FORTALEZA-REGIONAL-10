@@ -89,12 +89,6 @@ TURMA_OPTIONS = [
         "encerramento_id": "1", "endereco_id": "1",
     },
     {
-        "id": "2", "curso_id": "2", "local_id": "1",
-        "turma_codigo": "26/DSBR-03",
-        "agenda_id": "2", "periodo_id": "2",
-        "encerramento_id": "2", "endereco_id": "1",
-    },
-    {
         "id": "3", "curso_id": "3", "local_id": "1",
         "turma_codigo": "26/INAT-02",
         "agenda_id": "3", "periodo_id": "3",
