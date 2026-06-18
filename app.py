@@ -79,22 +79,34 @@ ADDRESS_OPTIONS = {
 # =============================================================================
 TURMA_OPTIONS = [
     {
-        "id": "1", "curso_id": "1", "local_id": "1",
+        "id": "1",
+        "curso_id": "1",
+        "local_id": "1",
         "turma_codigo": "26/MNIC-03",
-        "agenda_id": "1", "periodo_id": "1",
-        "encerramento_id": "1", "endereco_id": "1",
+        "agenda_id": "1",
+        "periodo_id": "1",
+        "encerramento_id": "1",
+        "endereco_id": "1",
     },
     {
-        "id": "2", "curso_id": "2", "local_id": "2",
+        "id": "2",
+        "curso_id": "2",
+        "local_id": "1",
         "turma_codigo": "26/INAT-02",
-        "agenda_id": "2", "periodo_id": "2",
-        "encerramento_id": "2", "endereco_id": "1",
+        "agenda_id": "2",
+        "periodo_id": "2",
+        "encerramento_id": "2",
+        "endereco_id": "1",
     },
     {
-        "id": "3", "curso_id": "3", "local_id": "3",
+        "id": "3",
+        "curso_id": "3",
+        "local_id": "1",
         "turma_codigo": "26/DSBR-05",
-        "agenda_id": "3", "periodo_id": "3",
-        "encerramento_id": "3", "endereco_id": "1",
+        "agenda_id": "3",
+        "periodo_id": "3",
+        "encerramento_id": "3",
+        "endereco_id": "1",
     },
 ]
 
