@@ -40,9 +40,8 @@ LOCAL_OPTIONS = [
 # =============================================================================
 COURSE_CATALOG = [
     {"id": "1", "nome": "26/MNIC 03 - MANICURE"},
-    {"id": "2", "nome": "26/DSBR 03 - DESIGNER DE SOBRANCELHAS"},
-    {"id": "3", "nome": "26/INAT 02 - INTELIGÊNCIA ARTIFICIAL"},
-    {"id": "4", "nome": "26/DSBR 05 - DESIGNER DE SOBRANCELHAS"},  # nova turma
+    {"id": "2", "nome": "26/INAT 02 - INTELIGÊNCIA ARTIFICIAL"},
+    {"id": "3", "nome": "26/DSBR 05 - DESIGNER DE SOBRANCELHAS"},  # nova turma
 ]
 
 # =============================================================================
@@ -50,9 +49,8 @@ COURSE_CATALOG = [
 # =============================================================================
 SCHEDULE_OPTIONS = {
     "1": {"dias_aula": "Quarta a Terça",   "horario": "08h até 12h"},  # MNIC03 - inalterado
-    "2": {"dias_aula": "Quarta a Terça",   "horario": "13h até 18h"},  # DSBR03 - inalterado
-    "3": {"dias_aula": "Segunda e Quarta", "horario": "09h até 11h"},  # INAT02 - inalterado
-    "4": {"dias_aula": "Quarta a Terça",   "horario": "13h até 18h"},  # DSBR05 - nova
+    "2": {"dias_aula": "Segunda e Quarta", "horario": "09h até 11h"},  # INAT02 - inalterado
+    "3": {"dias_aula": "Quarta a Terça",   "horario": "13h até 18h"},  # DSBR05 - nova
 }
 
 # =============================================================================
@@ -60,15 +58,13 @@ SCHEDULE_OPTIONS = {
 # =============================================================================
 START_DATE_OPTIONS = {
     "1": "17/06/2026",  # MNIC03 - inalterado
-    "2": "17/06/2026",  # DSBR03 - inalterado
-    "3": "29/06/2026",  # INAT02 - inalterado
-    "4": "17/06/2026",  # DSBR05 - nova
+    "2": "29/06/2026",  # INAT02 - inalterado
+    "3": "17/06/2026",  # DSBR05 - nova
 }
 END_DATE_OPTIONS = {
     "1": "23/06/2026",  # MNIC03 - inalterado
-    "2": "23/06/2026",  # DSBR03 - inalterado
-    "3": "29/07/2026",  # INAT02 - inalterado
-    "4": "23/06/2026",  # DSBR05 - nova
+    "2": "29/07/2026",  # INAT02 - inalterado
+    "3": "23/06/2026",  # DSBR05 - nova
 }
 
 # =============================================================================
@@ -89,16 +85,16 @@ TURMA_OPTIONS = [
         "encerramento_id": "1", "endereco_id": "1",
     },
     {
-        "id": "3", "curso_id": "3", "local_id": "1",
+        "id": "2", "curso_id": "2", "local_id": "2",
         "turma_codigo": "26/INAT-02",
-        "agenda_id": "3", "periodo_id": "3",
-        "encerramento_id": "3", "endereco_id": "1",
+        "agenda_id": "2", "periodo_id": "2",
+        "encerramento_id": "2", "endereco_id": "2",
     },
     {
-        "id": "4", "curso_id": "4", "local_id": "1",
+        "id": "3", "curso_id": "3", "local_id": "3",
         "turma_codigo": "26/DSBR-05",
-        "agenda_id": "4", "periodo_id": "4",
-        "encerramento_id": "4", "endereco_id": "1",
+        "agenda_id": "3", "periodo_id": "3",
+        "encerramento_id": "3", "endereco_id": "3",
     },
 ]
 
