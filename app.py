@@ -810,10 +810,9 @@ TEMPLATE_WIZARD = """\
                                 <div class="hero-highlight">
                                     <strong>CURSOS DISPONÍVEIS:</strong>
                                     <div class="cursos-lista">
-                                        <span class="curso-tag">&#128133; 26/MNIC 03 - Manicure</span>
-                                        <span class="curso-tag">&#128130; 26/DSBR 03 - Designer de Sobrancelhas</span>
-                                        <span class="curso-tag">&#129302; 26/INAT 02 - Inteligência Artificial</span>
-                                        <span class="curso-tag">&#128130; 26/DSBR 05 - Designer de Sobrancelhas</span>
+                                        <span class="curso-tag">&#128133; Manicure</span>
+                                        <span class="curso-tag">&#128130; Designer de Sobrancelhas</span>
+                                        <span class="curso-tag">&#129302; Inteligência Artificial</span>
                                     </div>
                                 </div>
 
