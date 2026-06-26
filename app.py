@@ -41,30 +41,31 @@ LOCAL_OPTIONS = [
 COURSE_CATALOG = [
     {"id": "1", "nome": "26/MNIC 03 - MANICURE"},
     {"id": "2", "nome": "26/INAT 02 - INTELIGÊNCIA ARTIFICIAL"},
-    {"id": "3", "nome": "26/DSBR 05 - DESIGNER DE SOBRANCELHAS"},  # nova turma
+    {"id": "3", "nome": "26/DSBR 05 - DESIGNER DE SOBRANCELHAS"},
 ]
 
 # =============================================================================
 # 3. HORÁRIOS
 # =============================================================================
 SCHEDULE_OPTIONS = {
-    "1": {"dias_aula": "Quarta a Terça",   "horario": "08h até 12h"},  # MNIC03 - inalterado
-    "2": {"dias_aula": "Segunda e Quarta", "horario": "09h até 11h"},  # INAT02 - inalterado
-    "3": {"dias_aula": "Quarta a Terça",   "horario": "13h até 18h"},  # DSBR05 - nova
+    "1": {"dias_aula": "Quarta a Terça",   "horario": "08h até 12h"},
+    "2": {"dias_aula": "Segunda e Quarta", "horario": "09h até 11h"},
+    "3": {"dias_aula": "Quarta a Terça",   "horario": "13h até 18h"},
 }
 
 # =============================================================================
 # 4-5. DATAS
 # =============================================================================
 START_DATE_OPTIONS = {
-    "1": "17/06/2026",  # MNIC03 - inalterado
-    "2": "29/06/2026",  # INAT02 - inalterado
-    "3": "17/06/2026",  # DSBR05 - nova
+    "1": "17/06/2026",
+    "2": "06/07/2026",
+    "3": "17/06/2026",
 }
+
 END_DATE_OPTIONS = {
-    "1": "23/06/2026",  # MNIC03 - inalterado
-    "2": "29/07/2026",  # INAT02 - inalterado
-    "3": "23/06/2026",  # DSBR05 - nova
+    "1": "23/06/2026",
+    "2": "29/07/2026",
+    "3": "23/06/2026",
 }
 
 # =============================================================================
@@ -113,6 +114,7 @@ TURMA_OPTIONS = [
 # =============================================================================
 # 8. FUNÇÕES AUXILIARES
 # =============================================================================
+
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
     course_by_id = {opt["id"]: opt for opt in COURSE_CATALOG}
